@@ -1,3 +1,5 @@
+import { resolveSiteUrl } from "./site-url";
+
 export const studio = {
   name: "בסטודיו עם פייגי",
   shortName: "עם פייגי",
@@ -11,7 +13,11 @@ export const studio = {
   demo: true,
 };
 
-export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://example.com").replace(/\/$/, "");
+export const siteUrl = resolveSiteUrl({
+  NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL,
+  VERCEL_PROJECT_PRODUCTION_URL: process.env.VERCEL_PROJECT_PRODUCTION_URL,
+  VERCEL_URL: process.env.VERCEL_URL,
+});
 export const whatsappUrl = (message: string) =>
   `https://wa.me/${studio.phoneE164}?text=${encodeURIComponent(message)}`;
 export const introMessage = "שלום פייגי, הגעתי דרך האתר ואשמח לשמוע פרטים על הסדנאות.";
