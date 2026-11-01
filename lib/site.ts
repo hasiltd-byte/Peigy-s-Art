@@ -17,7 +17,7 @@ export const siteUrl = resolveSiteUrl({
   NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL,
   VERCEL_PROJECT_PRODUCTION_URL: process.env.VERCEL_PROJECT_PRODUCTION_URL,
   VERCEL_URL: process.env.VERCEL_URL,
-});
+}, "https://peigysart.mybizsite.co");
 export const whatsappUrl = (message: string) =>
   `https://wa.me/${studio.phoneE164}?text=${encodeURIComponent(message)}`;
 export const introMessage = "שלום פייגי, הגעתי דרך האתר ואשמח לשמוע פרטים על הסדנאות.";

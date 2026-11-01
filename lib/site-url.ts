@@ -1,6 +1,9 @@
 // Resolve at build time: the static export must contain public, absolute URLs
 // for social crawlers, even when no custom domain has been configured yet.
-export function resolveSiteUrl(environment: Record<string, string | undefined>): string {
+export function resolveSiteUrl(
+  environment: Record<string, string | undefined>,
+  fallbackUrl = "http://localhost:3000",
+): string {
   const candidates = [
     environment.NEXT_PUBLIC_SITE_URL,
     environment.VERCEL_PROJECT_PRODUCTION_URL,
@@ -21,5 +24,5 @@ export function resolveSiteUrl(environment: Record<string, string | undefined>):
     }
   }
 
-  return "http://localhost:3000";
+  return fallbackUrl;
 }
