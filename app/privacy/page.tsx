@@ -1,0 +1,4 @@
+import Link from "next/link";
+import { studio } from "@/lib/site";
+export const metadata={title:"פרטיות",description:"מידע על פרטיות וטיפול בפניות באתר ההדגמה"};
+export default function Privacy(){return <main className="legal-page container" id="main"><Link href="/">← חזרה לעמוד הבית</Link><p className="overline">PRIVACY</p><h1>פרטיות</h1><p><strong>אתר הדגמה — יש להתאים את העמוד לאחר אישור בעלת העסק ולפני השקה.</strong></p><p>הטופס באתר אינו שולח נתונים לשרת ואינו שומר פרטי קשר במסד נתונים. בלחיצה על כפתור הפנייה נפתח יישום WhatsApp עם נוסח הודעה שהגולש רשאי לערוך ולאשר.</p><p>השימוש ב־WhatsApp כפוף לתנאי השירות והפרטיות של WhatsApp. האתר אינו מפעיל כרגע כלי אנליטיקה, פיקסלים פרסומיים או עוגיות מעקב.</p><p>אם יתווספו טפסים הנשלחים לשרת, אנליטיקה או סליקה, יש לעדכן מדיניות זו בפועל ולבחון את הדרישות המשפטיות הרלוונטיות.</p><p>לשאלות: <a href={`tel:+${studio.phoneE164}`}>{studio.phone}</a>.</p></main>}

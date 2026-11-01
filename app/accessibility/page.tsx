@@ -1,0 +1,4 @@
+import Link from "next/link";
+import { studio } from "@/lib/site";
+export const metadata={title:"הצהרת נגישות",description:"מידע על נגישות גרסת ההדגמה של אתר בסטודיו עם פייגי"};
+export default function Accessibility(){return <main className="legal-page container" id="main"><Link href="/">← חזרה לעמוד הבית</Link><p className="overline">ACCESSIBILITY</p><h1>הצהרת נגישות — גרסת הדגמה</h1><p><strong>חשוב:</strong> זהו נוסח ראשוני לאתר הדגמה, לא אישור נגישות ולא הצהרה שנבדק תקן מלא. יש לבצע בדיקות נגישות ידניות ואוטומטיות ולעדכן את המידע לפני פרסום רשמי.</p><p>האתר תוכנן בכיווניות RTL, עם מבנה כותרות, ניווט מקלדת, קישורים ברורים, תוויות לשדות טופס והתחשבות בהעדפת תנועה מופחתת. ניתן להגדיל את התצוגה באמצעות יכולות הדפדפן והמכשיר.</p><p>לשאלות, בקשות והתאמות נגישות אפשר לפנות לטלפון <a href={`tel:+${studio.phoneE164}`}>{studio.phone}</a>. פרטי אחראי הנגישות והסדרי הנגישות הפיזית של העסק דורשים אישור הבעלים לפני פרסום.</p></main>}
